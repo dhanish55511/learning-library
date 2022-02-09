@@ -49,20 +49,20 @@ This step illustrates how you can access the OML4Py Classification DT (1) notebo
 	![List of Notebooks available.](images/list-notebooks-available.png)
 
 3. The OML4Py Classification DT (1) notebook opens up in the notebook editor. Click the gear icon ![Gear Icon](images/gear-icon.png) on the top right corner of the notebook to view and set the interpreter binding order.
-	![Illustration for getting the configuration for interpreter](/images/getting-configuration-interpreter.png)
+	![Illustration for getting the configuration for interpreter](images/getting-configuration-interpreter.png)
 	You can change the order of the interpreter bindings by clicking and dragging an entry above or below others (turns from white to blue). You can also deselect a binding to disable it (turns from blue to white). This does not require dragging the enabled interpreters above the disabled ones.
-	![Illustration for configuring interpreter](/images/configuring-interpreter.png)
+	![Illustration for configuring interpreter](images/configuring-interpreter.png)
 	Click **Save** to set the interpreter bindings.
 
 4. Click the play icon next to the title of the notebook to run all paragraphs.
-	![Illustration for running all paragraph](/images/run-all-paragraphs.png)
+	![Illustration for running all paragraph](images/run-all-paragraphs.png)
 
 5. Click **OK** to confirm in the confirmation dialogue.
-	![Confirmation for running all paragraph](/images/confirmation-run-all-paragraphs.png)
+	![Confirmation for running all paragraph](images/confirmation-run-all-paragraphs.png)
 
 6. The paragraphs start running one by one and display the status next to the paragraph titles. When the paragraph is running, the status displays **PENDING** and when it finishes, it displays **FINISHED**.
-	![Illustration for pending on a paragraph](/images/pending-paragraph.png)
-	![Illustration for finished on a paragraph](/images/finished-paragraph.png)
+	![Illustration for pending on a paragraph](images/pending-paragraph.png)
+	![Illustration for finished on a paragraph](images/finished-paragraph.png)
 
 In this step, the iris data set is used for illustrative purposes to load the data into a temporary database table. Such temporary tables are automatically deleted when the OML Notebook connection to the database ends unless you have saved its proxy object to a datastore, which we'll discuss in step 10, before disconnecting.
 To use OML4Py, you must first import the `oml` module and the Pandas library. Use the `oml.push` function to create a temporary table.
@@ -698,23 +698,23 @@ You can save the python objects you create in one python session and load them i
 
 3. In this step, you will use `oml.ds.load` function for loading one or more python objects from the datastore to the global workspace or the user's workspace.
 	- Run the following script to load all the python objects of a datastore into global Workspace and sort them by their name
-	```
-	<copy>
-	%python
-	sorted(oml.ds.load(name="ds_pydata"))
-	</copy>
-	```
-	![Sorted list of python proxy objects in a datastore.](images/sorted-objects-datastore.png)
+		```
+		<copy>
+		%python
+		sorted(oml.ds.load(name="ds_pydata"))
+		</copy>
+		```
+		![Sorted list of python proxy objects in a datastore.](images/sorted-objects-datastore.png)
 
 	- Run the following script to load the named python object from the datastore into the global workspace.
-	```
-	<copy>
-	%python
-	oml.ds.load(name="ds_pymodel", objs=["dt_mod"])
-	</copy>
-	```
-	The output is similar to the following:
-	![list of python model proxy objects in a datastore.](images/model-object-datastore.png)
+		```
+		<copy>
+		%python
+		oml.ds.load(name="ds_pymodel", objs=["dt_mod"])
+		</copy>
+		```
+		The output is similar to the following:
+		![list of python model proxy objects in a datastore.](images/model-object-datastore.png)
 
 		Run the following script to use the loaded model `dt_mod` from the datastore to make predictions on the test data using the predict function.
 		```
@@ -728,16 +728,16 @@ You can save the python objects you create in one python session and load them i
 		![Rows of res_ds after prediction by loaded model.](images/rows-res-ds.png)
 
 	- Run the following script to load the named python object from the datastore into the user's workspace.
-	```
-	<copy>
-	%python
-	oml.ds.load(name="ds_pymodel", objs=["dt_mod"], to_globals=False)
-	</copy>
-	```
-	The output is similar to the following:
-	![Illustration of a dictionary object containing the models name and value.](images/loaded-dictionaryobject-datastore.png)
-	Also, the boolean input **to\_globals** is set to True by default. If to\_global=True then the `oml.ds.load` loads the python object to the global workspace. If to\_global=False, then the `oml.ds.load` function returns a dictionary object containing the object's name and value.
-	To learn more about how to use datastores to store python objects click this [link](https://docs.oracle.com/en/database/oracle/machine-learning/oml4py/1/mlpug/save-python-objects-in-database.html#GUID-C02396D1-2B30-47A0-AE27-37B123E15710).
+		```
+		<copy>
+		%python
+		oml.ds.load(name="ds_pymodel", objs=["dt_mod"], to_globals=False)
+		</copy>
+		```
+		The output is similar to the following:
+		![Illustration of a dictionary object containing the models name and value.](images/loaded-dictionaryobject-datastore.png)
+		Also, the boolean input **to\_globals** is set to True by default. If to\_global=True then the `oml.ds.load` loads the python object to the global workspace. If to\_global=False, then the `oml.ds.load` function returns a dictionary object containing the object's name and value.
+		To learn more about how to use datastores to store python objects click this [link](https://docs.oracle.com/en/database/oracle/machine-learning/oml4py/1/mlpug/save-python-objects-in-database.html#GUID-C02396D1-2B30-47A0-AE27-37B123E15710).
 
 In this example, you classified customers who are most likely to be positive responders to an Affinity Card loyal program. You built and applied a classification decision tree model using the Sales history (SH) schema data. You were also able to successfully identify the top **N** attributes that are important to the model built.
 
