@@ -666,11 +666,11 @@ You can score data and make similar predictions using the SQL interface. The tes
 
 You can save the python objects you create in one python session and load them in another session using the OML4Py datastore. Python objects and OML4Py proxy objects exist only during the current Python session, unless they are saved to a Datastore. OML4Py creates the datastore in the current user’s database schema. Until you delete the datastore and objects, they remain in the database. OML4Py provides functions for managing the objects in the datastore, such as `oml.ds.save`, `oml.ds.load`, `oml.ds.dir`, and so on.
 
-1. First insert a new paragraph at the bottom of the Notebook. Click on the setting icon in the top-right corner of the last paragraph. Then, click on **Insert new** in the drop-down list. The default paragraph shows %md indicating that it is a markdown paragraph. To run a Python code, enter %python to change it to a Python paragraph.
+1. First insert a new paragraph at the bottom of the Notebook. Click on the gear icon in the top-right corner of the last paragraph. Then, click on **Insert new** in the drop-down list. The default paragraph shows %md indicating that it is a markdown paragraph. To run a Python code, enter %python to change it to a Python paragraph.
 	![Drop down-list of setting of a paragraph.](images/setting-paragraph.png)
 
 2. To save one or more python objects to a datastore, use the `oml.ds.save` function. Here the DataFrame object is stored to `ds_pydata` and python model object is stored to `ds_pymodel`.
-	- To save IRIS and res_df `oml.DataFrame` proxy object to the `ds_pydata` datastore, run the script below. Use the oml.sync function to create a python object as a proxy for IRIS table (similarly as done in Task 3). You can give some descriptive text using the description argument, which will appear when you get information on the datastore.
+	- To save IRIS and res_df `oml.DataFrame` proxy object to the `ds_pydata` datastore, run the script below. Use the oml.sync function to create a python object as a proxy for IRIS table (see Task 3). You can give some descriptive text using the description argument, which will appear when you get information on the datastore.
 	```
 	<copy>
 	%python
