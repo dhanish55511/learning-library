@@ -716,7 +716,7 @@ You can save the python objects you create in one python session and load them i
 		The output is similar to the following:
 		![list of python model proxy objects in a datastore.](images/model-object-datastore.png)
 
-		Run the following script to use the loaded model `dt_mod` from the datastore to make predictions on the test data using the predict function.
+		Run the following script to use the `dt_mod` model from the datastore to make predictions on the test data using the predict function.
 		```
 		<copy>
 		%python
