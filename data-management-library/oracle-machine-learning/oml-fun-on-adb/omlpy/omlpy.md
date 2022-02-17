@@ -37,12 +37,13 @@ This lab assumes you have:
 
 
 ## Task 1: Create a Database Table
-With OML4Py, you can create Python proxy objects that can be used to access, analyze, and manipulate data that resides in the database. OML4Py uses these proxy objects and transparently translates many standard Python functions into SQL. First access the OML4Py Classification DT (1) notebook and then create the database table.
+With OML4Py, you can create Python proxy objects that can be used to access, analyze, and manipulate data that reside in the database. OML4Py uses these proxy objects and transparently translates many standard Python functions into SQL. First access the OML4Py Classification DT (1) notebook and then create the database table.
 
 ### Access the OML4Py Classification DT (1) notebook
 
 This step illustrates how you can access the OML4Py Classification DT (1) notebook available on the Notebook page which was created in Lab 1. The OML4Py Classification DT (1) notebook was created based on the example template of the OML4Py Classification Decision Tree.
 1. Click the hamburger icon ![Hamburger Icon](images/hamburger-icon.png) on the top left screen. Click Notebooks to proceed to the Notebook page.
+	![Illustration of Hamburger Icon with OML.](images/hamburger-oml.png)
 	![Left pane navigation to Notebooks through hamburger icon.](images/left-pane-navigation.png)
 
 2. The Notebook page opens with the list of notebooks available. Click the OML4Py Classification DT (1) notebook to open it.
@@ -716,7 +717,7 @@ You can save the python objects you create in one python session and load them i
 		The output is similar to the following:
 		![list of python model proxy objects in a datastore.](images/model-object-datastore.png)
 
-		Run the following script to use the `dt_mod` model from the datastore to make predictions on the test data using the predict function.
+	-	Run the following script to use the `dt_mod` model from the datastore to make predictions on the test data using the predict function.
 		```
 		<copy>
 		%python
@@ -766,5 +767,5 @@ OML4Py enables data scientists to hand-off their user-defined Python functions t
 
 ## Acknowledgements
 * **Authors** - Sarika Surampudi, Senior User Assistance Developer, Oracle Database User Assistance Development; Dhanish Kumar, Member of Technical Staff, User Assistance Developer.
-* **Contributors** -  Mark Hornick, Senior Director, Data Science and Machine Learning; Sherry LaMonica, Principal Member of Tech Staff, Advanced Analytics, Machine Learning.
+* **Contributors** -  Mark Hornick, Senior Director, Data Science and Machine Learning; Sherry LaMonica, Consulting Member of Tech Staff, Machine Learning; Marcos Arancibia, Senior Principal Product Manager, Machine Learning.
 * **Last Updated By/Date** - Dhanish Kumar, February 2022
