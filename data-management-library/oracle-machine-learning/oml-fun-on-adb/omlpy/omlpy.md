@@ -698,7 +698,7 @@ You can save the python objects you create in one python session and load them i
 	The output also includes the size in bytes consumed, the date, and the descriptive text provided by the user when loading the python objects into the datastore.
 
 3. In this step, you will use `oml.ds.load` function for loading one or more python objects from the datastore to the global workspace or the user's workspace.
-	- Run the following script to load all the python objects of a datastore into global Workspace and sort them by their name
+	- Run the following script to load all the python objects of a datastore into global Workspace and sort them by their name.
 		```
 		<copy>
 		%python
